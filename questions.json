@@ -1,0 +1,542 @@
+[
+ {
+  "question": "[AIAPGET 2019] Which homeopathic medicine is indicated for pain after incision?",
+  "options": [
+   "Arnica montana",
+   "Hypericum perforatum",
+   "Staphysagria",
+   "Calendula officinalis"
+  ],
+  "correct_index": 2,
+  "explanation": "Staphysagria is specific for incision pain; AIAPGET 2019; Ref: Boericke",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2020] Which remedy is best for suppurative wounds with offensive discharge?",
+  "options": [
+   "Hepar sulphuris calcareum",
+   "Silicea terra",
+   "Pyrogenium",
+   "Mercurius solubilis"
+  ],
+  "correct_index": 0,
+  "explanation": "Hepar sulphuris treats offensive pus; AIAPGET 2020; Ref: Boericke",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2021] Which homeopathic medicine is useful to prevent postoperative gangrene?",
+  "options": [
+   "Secale cornutum",
+   "Arsenic album",
+   "Carbo vegetabilis",
+   "Lachesis muta"
+  ],
+  "correct_index": 0,
+  "explanation": "Secale cornutum prevents gangrene with cold, blackish parts; AIAPGET 2021; Ref: Boericke",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2022] Which remedy is indicated for postoperative nausea and vomiting?",
+  "options": [
+   "Ipecacuanha",
+   "Nux vomica",
+   "Cocculus indicus",
+   "Arsenic album"
+  ],
+  "correct_index": 0,
+  "explanation": "Ipecacuanha covers persistent nausea with vomiting; AIAPGET 2022; Ref: Boericke",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2023] Which medicine is best for hemorrhagic tendency after minor surgery?",
+  "options": [
+   "Phosphorus",
+   "Hamamelis virginica",
+   "Lachesis muta",
+   "Millifolium"
+  ],
+  "correct_index": 0,
+  "explanation": "Phosphorus addresses bright red bleeding from any orifice; AIAPGET 2023; Ref: Boericke",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2019] Which homeopathic medicine is indicated for delayed dentition in children?",
+  "options": [
+   "Calcarea carb",
+   "Silicea",
+   "Chamomilla",
+   "Magnesia phosphorica"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2019; Ref: Boericke Materia Medica.",
+  "subject": "Practice of Medicine (Paediatrics)"
+ },
+ {
+  "question": "[AIAPGET 2020] Which remedy is best for infantile diarrhea during teething?",
+  "options": [
+   "Chamomilla",
+   "Podophyllum",
+   "Rheum",
+   "Magnesia carb"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2020; Ref: Boericke Materia Medica.",
+  "subject": "Practice of Medicine (Paediatrics)"
+ },
+ {
+  "question": "[AIAPGET 2021] Which medicine is indicated for nocturnal enuresis in children?",
+  "options": [
+   "Causticum",
+   "Kreosotum",
+   "Sepia",
+   "Natrum mur"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2021; Ref: Kent Repertory.",
+  "subject": "Practice of Medicine (Paediatrics)"
+ },
+ {
+  "question": "[AIAPGET 2022] Which remedy is useful for marasmus in children?",
+  "options": [
+   "Iodum",
+   "Tuberculinum",
+   "Psorinum",
+   "Calcarea carb"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2022; Ref: Boericke Materia Medica.",
+  "subject": "Practice of Medicine (Paediatrics)"
+ },
+ {
+  "question": "[AIAPGET 2023] Which medicine is indicated for convulsions during fever in children?",
+  "options": [
+   "Belladonna",
+   "Cuprum met",
+   "Stramonium",
+   "Hyoscyamus"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2023; Ref: Kent Repertory.",
+  "subject": "Practice of Medicine (Paediatrics)"
+ },
+ {
+  "question": "[AIAPGET 2019] Which of the following is used as a vehicle for the preparation of mother tincture?",
+  "options": [
+   "Alcohol",
+   "Distilled water",
+   "Glycerin",
+   "Ether"
+  ],
+  "correct_index": 0,
+  "explanation": "Mother tincture of soluble drugs is prepared using alcohol as vehicle; AIAPGET 2019; Ref: Hahnemann's Organon of Medicine.",
+  "subject": "Homeopathic Pharmacy"
+ },
+ {
+  "question": "[AIAPGET 2020] Which scale is used for the preparation of LM (Q) potencies?",
+  "options": [
+   "1:10",
+   "1:100",
+   "1:1000",
+   "1:50000"
+  ],
+  "correct_index": 3,
+  "explanation": "LM potencies are prepared on 1:50,000 scale (Q potency); AIAPGET 2020; Ref: Homeopathic Pharmacy textbooks.",
+  "subject": "Homeopathic Pharmacy"
+ },
+ {
+  "question": "[AIAPGET 2021] What is the potency of a drug prepared by 1 part drug + 9 parts vehicle and succussed?",
+  "options": [
+   "1C",
+   "1X",
+   "1LM",
+   "1Q"
+  ],
+  "correct_index": 1,
+  "explanation": "Decimal scale (X) uses 1 part drug + 9 parts vehicle; AIAPGET 2021; Ref: Hahnemann's Organon.",
+  "subject": "Homeopathic Pharmacy"
+ },
+ {
+  "question": "[AIAPGET 2022] Which of the following is used as a vehicle for the preparation of globules?",
+  "options": [
+   "Lactose",
+   "Sucrose",
+   "Starch",
+   "Gum arabic"
+  ],
+  "correct_index": 1,
+  "explanation": "Globules are made of sucrose (or lactose) but sucrose is the standard vehicle; AIAPGET 2022; Ref: Homeopathic Pharmacy.",
+  "subject": "Homeopathic Pharmacy"
+ },
+ {
+  "question": "[AIAPGET 2023] Which of the following is NOT used as a vehicle for potentisation?",
+  "options": [
+   "Lactose",
+   "Sucrose",
+   "Distilled water",
+   "Glycerin"
+  ],
+  "correct_index": 3,
+  "explanation": "Glycerin is used as a base for external preparations, not for potentisation; AIAPGET 2023; Ref: Boericke's Materia Medica.",
+  "subject": "Homeopathic Pharmacy"
+ },
+ {
+  "question": "[AIAPGET 2020] Who is the author of 'Lectures on Homoeopathic Philosophy'?",
+  "options": [
+   "Kent",
+   "Hahnemann",
+   "Roberts",
+   "Boericke"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2020; Kent authored Lectures on Homoeopathic Philosophy.",
+  "subject": "Homeopathic Philosophy"
+ },
+ {
+  "question": "[AIAPGET 2019] Who wrote 'The Genius of Homoeopathy'?",
+  "options": [
+   "Kent",
+   "Hahnemann",
+   "Roberts",
+   "Boericke"
+  ],
+  "correct_index": 2,
+  "explanation": "AIAPGET 2019; Roberts authored The Genius of Homoeopathy.",
+  "subject": "Homeopathic Philosophy"
+ },
+ {
+  "question": "[AIAPGET 2021] Who introduced the concept of miasms in homeopathy?",
+  "options": [
+   "Kent",
+   "Hahnemann",
+   "Roberts",
+   "Boericke"
+  ],
+  "correct_index": 1,
+  "explanation": "AIAPGET 2021; Hahnemann introduced miasmatic theory in Chronic Diseases.",
+  "subject": "Homeopathic Philosophy"
+ },
+ {
+  "question": "[AIAPGET 2022] Who said 'The highest ideal of cure is rapid, gentle and permanent restoration of health'?",
+  "options": [
+   "Kent",
+   "Hahnemann",
+   "Roberts",
+   "Boericke"
+  ],
+  "correct_index": 1,
+  "explanation": "AIAPGET 2022; This is aphorism 2 of Organon of Medicine by Hahnemann.",
+  "subject": "Homeopathic Philosophy"
+ },
+ {
+  "question": "[AIAPGET 2023] Kent's repertory is arranged according to which principle?",
+  "options": [
+   "Alphabetical",
+   "Anatomical",
+   "Physiological",
+   "Pathological"
+  ],
+  "correct_index": 1,
+  "explanation": "AIAPGET 2023; Kent's repertory is arranged anatomically from head to toe.",
+  "subject": "Homeopathic Philosophy"
+ },
+ {
+  "question": "Which homeopathic medicine is indicated for incised wounds?",
+  "options": [
+   "Arnica montana",
+   "Hypericum perforatum",
+   "Staphisagria",
+   "Calendula officinalis"
+  ],
+  "correct_index": 2,
+  "explanation": "Staphisagria is indicated for clean incised wounds; AIAPGET; Ref: Boericke",
+  "subject": "Homeopathic Materia Medica"
+ },
+ {
+  "question": "Which remedy is best for nerve injury following surgical procedure?",
+  "options": [
+   "Arnica montana",
+   "Hypericum perforatum",
+   "Ledum palustre",
+   "Ruta graveolens"
+  ],
+  "correct_index": 1,
+  "explanation": "Hypericum is the remedy for injuries to nerves, especially after surgery; AIAPGET; Ref: Boericke",
+  "subject": "Homeopathic Materia Medica"
+ },
+ {
+  "question": "Which medicine is promoted for wound healing and prevention of infection after surgery?",
+  "options": [
+   "Arnica montana",
+   "Calendula officinalis",
+   "Graphites",
+   "Silicea"
+  ],
+  "correct_index": 1,
+  "explanation": "Calendula officinalis promotes healing of wounds and prevents suppuration; AIAPGET; Ref: Boericke",
+  "subject": "Homeopathic Materia Medica"
+ },
+ {
+  "question": "Which homeopathic medicine is indicated for postoperative hemorrhage with bright red blood?",
+  "options": [
+   "Arnica montana",
+   "Phosphorus",
+   "Hamamelis virginiana",
+   "Secale cornutum"
+  ],
+  "correct_index": 1,
+  "explanation": "Phosphorus is suited for bright red, passive bleeding after surgery; AIAPGET; Ref: Boericke",
+  "subject": "Homeopathic Materia Medica"
+ },
+ {
+  "question": "Which remedy is indicated for non-union of bone after surgical fracture?",
+  "options": [
+   "Symphytum officinale",
+   "Calcarea phosphorica",
+   "Ruta graveolens",
+   "Phytolacca decandra"
+  ],
+  "correct_index": 0,
+  "explanation": "Symphytum officinalis promotes union of fractured bones; AIAPGET; Ref: Boericke",
+  "subject": "Homeopathic Materia Medica"
+ },
+ {
+  "question": "[AIAPGET 2020] Boger-Boenninghausen's repertory is based on which concept?",
+  "options": [
+   "Totality of symptoms",
+   "Concomitant symptoms",
+   "Keynotes",
+   "Modalities"
+  ],
+  "correct_index": 1,
+  "explanation": "Boger-Boenninghausen's repertory focuses on concomitant symptoms; AIAPGET 2020; Ref: Boger-Boenninghausen Repertory.",
+  "subject": "Homeopathic Repertory"
+ },
+ {
+  "question": "[AIAPGET 2019] Murphy's repertory is also known as?",
+  "options": [
+   "Homeopathic Medical Repertory",
+   "Repertory of the Homeopathic Materia Medica",
+   "Kent's Repertory",
+   "Boenninghausen's Repertory"
+  ],
+  "correct_index": 0,
+  "explanation": "Murphy's repertory is titled Homeopathic Medical Repertory; AIAPGET 2019; Ref: Murphy's Repertory.",
+  "subject": "Homeopathic Repertory"
+ },
+ {
+  "question": "[AIAPGET 2021] In Kent's repertory, which chapter appears first?",
+  "options": [
+   "Mind",
+   "Head",
+   "Chest",
+   "Extremities"
+  ],
+  "correct_index": 0,
+  "explanation": "Kent's repertory starts with the Mind chapter; AIAPGET 2021; Ref: Kent's Repertory.",
+  "subject": "Homeopathic Repertory"
+ },
+ {
+  "question": "[AIAPGET 2022] Which of the following repertories contains the chapter 'Dreams'?",
+  "options": [
+   "Kent's repertory",
+   "Boger-Boenninghausen's repertory",
+   "Murphy's repertory",
+   "Boenninghausen's repertory"
+  ],
+  "correct_index": 0,
+  "explanation": "Kent's repertory includes a Dreams chapter; AIAPGET 2022; Ref: Kent's Repertory.",
+  "subject": "Homeopathic Repertory"
+ },
+ {
+  "question": "[AIAPGET 2023] Boenninghausen's repertory is arranged according to which principle?",
+  "options": [
+   "Alphabetical",
+   "Anatomical",
+   "Physiological",
+   "Pathological"
+  ],
+  "correct_index": 2,
+  "explanation": "Boenninghausen's repertory follows the physiological principle; AIAPGET 2023; Ref: Boenninghausen's Repertory.",
+  "subject": "Homeopathic Repertory"
+ },
+ {
+  "question": "[AIAPGET 2020] Which of the following is a nosode?",
+  "options": [
+   "Psorinum",
+   "Sulphur",
+   "Calcarea carb",
+   "Natrum mur"
+  ],
+  "correct_index": 0,
+  "explanation": "Psorinum is a nosode prepared from scabies vesicle material; AIAPGET 2020; Ref: Boericke.",
+  "subject": "Homeopathic Materia Medica"
+ },
+ {
+  "question": "[AIAPGET 2021] Which of the following is a sarcode?",
+  "options": [
+   "Thyroidinum",
+   "Psorinum",
+   "Tuberculinum",
+   "Medorrhinum"
+  ],
+  "correct_index": 0,
+  "explanation": "Thyroidinum is a sarcode prepared from thyroid gland; AIAPGET 2021; Ref: Boericke.",
+  "subject": "Homeopathic Materia Medica"
+ },
+ {
+  "question": "[AIAPGET 2022] Medorrhinum is a nosode prepared from?",
+  "options": [
+   "Gonorrhea discharge",
+   "Syphilis lesion",
+   "Tubercle bacilli",
+   "Cancer tissue"
+  ],
+  "correct_index": 0,
+  "explanation": "Medorrhinum is prepared from gonorrheal discharge; AIAPGET 2022; Ref: Boericke.",
+  "subject": "Homeopathic Materia Medica"
+ },
+ {
+  "question": "[AIAPGET 2023] Tuberculinum is prepared from?",
+  "options": [
+   "Tubercle bacilli",
+   "Cancer tissue",
+   "Syphilis",
+   "Gonorrhea"
+  ],
+  "correct_index": 0,
+  "explanation": "Tuberculinum is prepared from tubercle bacilli; AIAPGET 2023; Ref: Boericke.",
+  "subject": "Homeopathic Materia Medica"
+ },
+ {
+  "question": "[AIAPGET 2019] Carcinosin is a nosode prepared from?",
+  "options": [
+   "Cancer tissue",
+   "Tubercle bacilli",
+   "Syphilis",
+   "Gonorrhea"
+  ],
+  "correct_index": 0,
+  "explanation": "Carcinosin is a nosode prepared from cancer tissue; AIAPGET 2019; Ref: Boericke.",
+  "subject": "Homeopathic Materia Medica"
+ },
+ {
+  "question": "[AIAPGET 2020] Which of the following is not a component of the 'Reproductive and Child Health (RCH) Programme'?",
+  "options": [
+   "Antenatal care",
+   "Postnatal care",
+   "Family planning",
+   "Dental care"
+  ],
+  "correct_index": 3,
+  "explanation": "AIAPGET 2020; RCH excludes dental care.",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2020] The vaccine given at birth is?",
+  "options": [
+   "BCG",
+   "DPT",
+   "Measles",
+   "TT"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2020; BCG and OPV zero dose given at birth.",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2021] Which of the following is a live attenuated vaccine?",
+  "options": [
+   "Hepatitis B",
+   "HPV",
+   "OPV",
+   "Tetanus toxoid"
+  ],
+  "correct_index": 2,
+  "explanation": "AIAPGET 2021; OPV contains live attenuated poliovirus.",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2021] The ideal temperature for storage of vaccines is?",
+  "options": [
+   "-20°C",
+   "2-8°C",
+   "25°C",
+   "40°C"
+  ],
+  "correct_index": 1,
+  "explanation": "AIAPGET 2021; Vaccines stored at 2-8°C to maintain potency.",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2022] Which of the following is not a component of the 'National Vector Borne Disease Control Programme'?",
+  "options": [
+   "Malaria",
+   "Dengue",
+   "Filariasis",
+   "Leprosy"
+  ],
+  "correct_index": 3,
+  "explanation": "AIAPGET 2022; Leprosy is under NLEP, not NVBDCP.",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2022] The incubation period of measles is?",
+  "options": [
+   "7-10 days",
+   "10-14 days",
+   "14-21 days",
+   "21-28 days"
+  ],
+  "correct_index": 1,
+  "explanation": "AIAPGET 2022; Measles incubation period is 10-14 days.",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2023] Which of the following is a water-borne disease?",
+  "options": [
+   "Cholera",
+   "Malaria",
+   "Dengue",
+   "Filariasis"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2023; Cholera spreads via contaminated water.",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2023] The leading cause of death in India is?",
+  "options": [
+   "Cardiovascular diseases",
+   "Injuries",
+   "Respiratory infections",
+   "Diarrhea"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2023; CVD accounts for majority of deaths.",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2023] The vaccine that prevents cervical cancer is?",
+  "options": [
+   "HPV",
+   "HBV",
+   "MMR",
+   "DPT"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2023; HPV vaccine prevents cervical cancer.",
+  "subject": "Practice of Medicine"
+ },
+ {
+  "question": "[AIAPGET 2023] The most common cause of blindness in India is?",
+  "options": [
+   "Cataract",
+   "Glaucoma",
+   "Trachoma",
+   "Vitamin A deficiency"
+  ],
+  "correct_index": 0,
+  "explanation": "AIAPGET 2023; Cataract is leading cause of blindness.",
+  "subject": "Practice of Medicine"
+ }
+]

@@ -1,0 +1,27 @@
+# Render free-tier deploy: web service (polling bot + health endpoint on $PORT).
+services:
+  - type: web
+    name: homeopathy-quiz-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: nvidia/nemotron-3-super-120b-a12b:free
+      - key: CHANNEL_ID
+        value: "@homeopathyezy"
+      - key: GROUP_ID
+        value: ""
+      - key: ADMIN_ID
+        value: "8490922727"
+      - key: QUIZ_INTERVAL
+        value: "60"
+      - key: BANK_TARGET
+        value: "1200"
+      - key: DAILY_REFILL
+        value: "40"
