@@ -16,7 +16,7 @@ from telegram.ext import (
     PollAnswerHandler,
 )
 
-from bank import add_score, load_bank, load_state, pop_next, save_state, top_board
+from bank import add_score, consume_next, load_bank, load_state, pop_next, save_state, top_board
 from quiz_gen import SET_SIZE, generate_batch
 
 load_dotenv()
@@ -27,9 +27,11 @@ OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "nvidia/nemotron-3-super-120b-a
 CHANNEL_ID = os.getenv("CHANNEL_ID", "@homeopathyezy")
 GROUP_ID = os.getenv("GROUP_ID", "")  # linked discussion group for leaderboard (optional)
 ADMIN_ID = int(os.getenv("ADMIN_ID", "8490922727") or 8490922727)
-QUIZ_INTERVAL = int(os.getenv("QUIZ_INTERVAL", "60") or 60)  # 60s: 20s vote + 40s gap, gentler
+QUIZ_INTERVAL = int(os.getenv("QUIZ_INTERVAL", "60") or 60)  # 20s vote + gap
 DAILY_REFILL = int(os.getenv("DAILY_REFILL", "40") or 40)
-BANK_TARGET = int(os.getenv("BANK_TARGET", "1200") or 1200)
+BANK_TARGET = int(os.getenv("BANK_TARGET", "2000") or 2000)
+# True: each posted quiz is DELETED from memory forever (2000-cycle consume mode)
+CONSUME_MODE = os.getenv("CONSUME_MODE", "true").strip().lower() in ("1", "true", "yes")
 
 logging.basicConfig(
     format="%(asctime)s %(levelname)s %(name)s: %(message)s", level=logging.INFO
@@ -82,14 +84,14 @@ async def _refill_bank(reason: str = "") -> int:
 
 
 async def send_one_quiz(app: Application, chat_id: str, anonymous: bool) -> bool:
-    """Serve next quiz from bank; refill in background only when low."""
-    quiz, state = pop_next()
+    """Serve next quiz from bank (consume mode: posted quiz is deleted from memory)."""
+    quiz, state = consume_next() if CONSUME_MODE else pop_next()
     if quiz is None:
         log.warning("bank empty — emergency refill")
         added = await _refill_bank("empty")
         if not added:
             return False
-        quiz, state = pop_next()
+        quiz, state = consume_next() if CONSUME_MODE else pop_next()
         if quiz is None:
             return False
     # background top-up when bank runs low (don't block posting)
@@ -114,7 +116,15 @@ async def send_one_quiz(app: Application, chat_id: str, anonymous: bool) -> bool
         )
         if msg.poll:
             open_polls[msg.poll.id] = ([quiz["correct_index"]], set_no)
-        log.info("posted set %s Q%s to %s: %s", set_no, q_no, chat_id, quiz["question"][:60])
+        left = len(load_bank())
+        log.info("posted set %s Q%s to %s (bank left %s): %s", set_no, q_no, chat_id, left, quiz["question"][:60])
+        if state.get("cycle_done"):
+            await app.bot.send_message(
+                chat_id=chat_id,
+                text=f"🎯 <b>2000 questions completed ({state.get('posted_total', 0)} total).</b>\n"
+                "Memory cleared — old questions deleted. Fresh bank building up!",
+                parse_mode=ParseMode.HTML,
+            )
         if state.get("new_set"):
             await app.bot.send_message(
                 chat_id=chat_id,
@@ -150,10 +160,15 @@ async def post_board(app: Application, chat_id: str, set_no: int) -> None:
 
 async def auto_loop(app: Application):
     await asyncio.sleep(5)
-    log.info("auto-loop -> %s every %ss (bank %s)", CHANNEL_ID, QUIZ_INTERVAL, len(load_bank()))
+    log.info("auto-loop -> %s every %ss (bank %s, consume=%s)", CHANNEL_ID, QUIZ_INTERVAL, len(load_bank()), CONSUME_MODE)
     while True:
         try:
             if running:
+                if CONSUME_MODE and not load_bank():
+                    # memory empty + daily refill budget decides pace — wait, don't hot-loop
+                    log.info("bank empty, waiting 30 min for refill budget")
+                    await asyncio.sleep(1800)
+                    continue
                 # channel must stay anonymous; group copy ranked when GROUP_ID set
                 ok = await send_one_quiz(app, CHANNEL_ID, anonymous=True)
                 if GROUP_ID:

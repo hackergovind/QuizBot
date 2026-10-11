@@ -44,7 +44,8 @@ def add_to_bank(new_items: list[dict]) -> int:
 
 
 def load_state() -> dict:
-    default = {"pos": 0, "set_no": 1, "posted_in_set": 0, "api_used_today": 0, "api_day": ""}
+    default = {"pos": 0, "set_no": 1, "posted_in_set": 0, "posted_total": 0,
+               "api_used_today": 0, "api_day": ""}
     if not os.path.exists(STATE_PATH):
         return default
     try:
@@ -89,6 +90,32 @@ def pop_next(shuffle_each_set: bool = True) -> tuple[dict | None, dict]:
         state["new_set"] = True
     else:
         state["new_set"] = False
+    return quiz, state
+
+
+def consume_next() -> tuple[dict | None, dict]:
+    """Pop next quiz AND DELETE it from bank file (consume mode).
+
+    Once posted, the question is gone from memory forever. When the bank
+    hits empty, the bot must wait for paid/refill budget before posting again.
+    """
+    from quiz_gen import SET_SIZE  # avoid circulars at import time
+
+    bank = load_bank()
+    state = load_state()
+    if not bank:
+        return None, state
+    quiz = bank.pop(0)
+    save_bank(bank)
+    state["posted_total"] = state.get("posted_total", 0) + 1
+    state["posted_in_set"] = state.get("posted_in_set", 0) + 1
+    if state["posted_in_set"] >= SET_SIZE:
+        state["posted_in_set"] = 0
+        state["set_no"] = state.get("set_no", 1) + 1
+        state["new_set"] = True
+    else:
+        state["new_set"] = False
+    state["cycle_done"] = (state["posted_total"] % 2000 == 0)
     return quiz, state
 
 

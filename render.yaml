@@ -22,6 +22,8 @@ services:
       - key: QUIZ_INTERVAL
         value: "60"
       - key: BANK_TARGET
-        value: "1200"
+        value: "2000"
       - key: DAILY_REFILL
         value: "40"
+      - key: CONSUME_MODE
+        value: "true"
