@@ -40,3 +40,16 @@ Admin only (`ADMIN_ID`): `/quiznow` `/stop` `/startauto` `/refill`
 `bot.py` (bank-first loop, 120-Q sets, leaderboard) · `quiz_gen.py` (PYQ prompt,
 single + batch) · `bank.py` (bank/state/scores store) · `build_bank.py`
 `questions.json` (bank) · `state.json` (pos/set/api budget) · `scores.json`
+
+## 6. Host on Render (free)
+1. Push this folder to GitHub (`git remote add origin …; git push -u origin master`).
+2. https://dashboard.render.com → New → **Web Service** → select repo.
+   `render.yaml` pre-fills build (`pip install -r requirements.txt`) and start (`python bot.py`).
+3. In service **Environment**, set secrets: `BOT_TOKEN`, `OPENROUTER_API_KEY`
+   (rest already have defaults in `render.yaml`).
+4. Deploy. Open `https://<your-service>.onrender.com/` → should show `ok`.
+5. Anti-sleep: Render free sleeps after 15 min idle, which pauses quizzes.
+   Add free monitor at https://uptimerobot.com pinging your URL every 10 min.
+6. Free-tier limits: filesystem is ephemeral — `questions.json` seed (45 Qs) ships
+   with the repo; `state.json`/`scores.json` reset on restart. For permanent
+   leaderboard/bank growth use `/refill` (≤40 API calls/day) or a free DB later.
